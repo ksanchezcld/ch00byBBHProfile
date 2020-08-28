@@ -1,6 +1,7 @@
 FROM alpine:latest
 RUN apk update
 RUN apk add \
+pip3 \
 git \
 RUN rm -rf /var/cache/apk/*
 WORKDIR /root
