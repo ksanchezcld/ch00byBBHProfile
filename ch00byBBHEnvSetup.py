@@ -44,8 +44,8 @@ def versionCheck():
                     print(C + '[' + G + 'Up-To-Date' + C + ']' + '\n')
                 else:
                     print(C + '[' + G + 'Available' + C + ']' + '\n')
-                else:
-                    print(C + '[' + R + 'Status : {}'.format(vScode) + C + ']' + '\n')
+                #else:
+                    #print(C + '[' + R + 'Status : {}'.format(vScode) + C + ']' + '\n')
         except Exception as e:
             print('\n\n' + R + '[-]' + C + ' Exception : ' + W + str(e))
             sys.exit()
@@ -355,8 +355,8 @@ if __name__ == '__main__':
 '''
 
 banner()
-versionCheck()
-systemDependiencies()
+#versionCheck()
+#systemDependiencies()
 createDirEstructure()
 setupHackingTools()
 
