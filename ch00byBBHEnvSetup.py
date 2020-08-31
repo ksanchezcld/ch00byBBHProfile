@@ -2,6 +2,7 @@
 #_*_ coding: utf8 _*_
 
 import os, subprocess, sys, getpass, time, smtplib, argparse, json, platform
+from pathlib import Path
 
 R = '\033[31m' # red
 G = '\033[32m' # green
@@ -76,14 +77,19 @@ def certificateSetup():
 
 
 def createDirEstructure():
+    Path("/tmp/BBH/").mkdir(parents=True, exist_ok=True)
     #parent_dir = "/mnt/bbh_home/tools/BBH"
     parent_dir = "/tmp/BBH/"             #Eliminar
     directory = "MALWARE"                #Eliminar
-    os.mkdir(parent_dir)
-    if os.mkdir.exist:                  #Revisar
-        print("The folder already exist. Check you installation")
-    os.chdir(parent_dir)
-    print(os.getcwd())
+    #os.mkdir(parent_dir)
+    #if os.mkdir.exists:                  #Revisar
+    if not os.path.exists(parent_dir):
+        print("Creating Directory....")
+        os.makedirs(parent_dir)
+    else:
+        #os.rmdir()
+        os.chdir(parent_dir)
+        print(os.getcwd())
 
 
     l1_subdir = [
@@ -98,7 +104,7 @@ def createDirEstructure():
 
     l2_subdirCms = ['JOOMLA', 'WORPRESS', 'WIX', 'OSCOMMERCE', 'WOOCOMERCE']
 
-    l2_subdirSource_code = ['PYTHON', 'JAVASCRIPT','BASH','VULNERABLE-CODE-LAB']
+    l2_subdirSourceCode = ['PYTHON', 'JAVASCRIPT','BASH','VULNERABLE-CODE-LAB']
 
     l2_subdirExploits = ['WEBSHELLS','PAYLOADS']
 
@@ -108,50 +114,79 @@ def createDirEstructure():
  
     #IMPROVE THIS CODE   :: os.walk()
     for sub in range(len(l1_subdir)):
-        os.makedirs(l1_subdir[sub])
+        if not os.path.exists(l1_subdir[sub]):
+            os.makedirs(l1_subdir[sub])
+        else:
+            continue
 
     os.chdir('INJECTION/')
-
-    for i in range(len(l2_subdirinjection)):
-        print(l2_subdirInjection[i])
-        os.makedirs(l2_subdirInjection[i])
+    for i in range(len(l2_subdirInjection)):
+        if not os.path.exists(l2_subdirInjection[i]):
+            os.makedirs(l2_subdirInjection[i])
+            print(l2_subdirInjection[i])
+        else:
+            continue
         
     os.chdir(parent_dir)
     os.chdir('RECON/')
     for i in range(len(l2_subdirRecon)):
-        os.makedirs(l2_subdirRecon[i])  
+        if not os.path.exists(l2_subdirRecon[i]):
+            os.makedirs(l2_subdirRecon[i])
+            print(l2_subdirRecon[i])
+        else:
+            continue
 
     os.chdir(parent_dir)
     os.chdir('WEB-FUZZERS/')
     for i in range(len(l2_subdirWebfuz)):
-        os.makedirs(l2_subdirWebfuz[i])
+        if not os.path.exists(l2_subdirWebfuz[i]):
+            os.makedirs(l2_subdirWebfuz[i])
+            print(l2_subdirWebfuz[i])
+        else:
+            continue
 
     os.chdir(parent_dir)
     os.chdir('CMS/')
     for i in range(len(l2_subdirCms)):
-        os.makedirs(l2_subdirCms[i])
+        if not os.path.exists(l2_subdirCms[i]):
+            os.makedirs(l2_subdirCms[i])
+            print(l2_subdirCms)
+        else:
+            continue
 
     os.chdir(parent_dir)
     os.chdir('SOURCE-CODE/')
     for i in range(len(l2_subdirSourceCode)):
-        os.makedirs(l2_subdirSourceCode[i])
+        if not os.path.exists(l2_subdirSourceCode[i]):
+            os.makedirs(l2_subdirSourceCode[i])
+            print(l2_subdirSourceCode[i])
+        else:
+            continue
 
     os.chdir(parent_dir)
     os.chdir('EXPLOITS/')
     for i in range(len(l2_subdirExploits)):
-        os.makedirs(l2_subdirExploits[i])
+        if not os.path.exists(l2_subdirExploits[i]):
+            os.makedirs(l2_subdirExploits[i])
+            print(l2_subdirExploits[i])
+        else:
+            continue
 
     os.chdir(parent_dir)
     os.chdir('MALWARE/')
     for i in range(len(l2_subdirMalware)):
-        d = l2_subdirMalware[i]
-        #os.makedirs(l2_subdir_malware[i])
-        for parent_dir, directory, files in os.walk(d):
-            print(files)
+        if not os.path.exists(l2_subdirMalware[i]):
+            os.makedirs(l2_subdirMalware[i])
+            print(l2_subdirMalware[i])
+        # d = l2_subdirMalware[i]
+        #for parent_dir, directory, files in os.walk(d):
+            #print(files)
+        else:
+            continue
 
     os.chdir(parent_dir)
     print(os.listdir(os.getcwd()))
-
+    print("DIRECTORY STRUCTURE COMPLETED......HAPPY HACKING")
 '''
     l1_subdirectories = [
                          "RECON",['SUBDOMAIN', 'GIT', 'AWS', 'AZURE', 'WAF', 'SCREENSHOT', 'CMS', 'SERVICES', 'WEB-FUZZERS'], 
@@ -220,11 +255,15 @@ def systemDependiencies():
 def setupHackingTools():
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
     print(G + "[*][*] Installing" + C + " {{XSS}} " + G + "TOOLS [*][*]")
-    os.chdir(parent_dir+'INJECTION/XSS/')
-    try:
-        os.makedirs(parent_dir+'INJECTION/XSS/PAYLOADS')
-    except:
-        pass
+    if os.path.exists(parent_dir+'INJECTION/XSS/'):
+        os.chdir(parent_dir+'INJECTION/XSS/')
+        os.system('git clone https://github.com/s0md3v/XSStrike.git')
+        os.system('git clone https://github.com/capture0x/XSS-LOADER/')
+        if not os.path.exists(parent_dir+'INJECTION/XSS/PAYLOADS'):
+            try:
+                os.makedirs(parent_dir+'INJECTION/XSS/PAYLOADS')
+            except:
+                pass
     #os.system('git clone https://github.com/s0md3v/XSStrike.git')
     with open('packages.xssGitProjects.txt', 'r') as xssGitProjects:
         for xssGit in xssGitProjects:
