@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #_*_ coding: utf8 _*_
 
-import os, subprocess, sys, getpass, time, smtplib, argparse, json, platform
+import os, subprocess, sys, getpass, time, smtplib, platform
 from pathlib import Path
 
 R = '\033[31m' # red
@@ -26,8 +26,7 @@ else:
 
 #os.system(screen)                   # to keep the sesion open
 #os.system(ttyrec)                   # to record the session
-parent_dir = "/tmp/BBH/"             #Eliminar  :: parent_dir = "/mnt/bbh_home/tools/BBH"
-directory = "MALWARE"                #Eliminar
+parent_dir = "/root/BBH/"             #Eliminar  :: parent_dir = "/mnt/bbh_home/tools/BBH"
 
 # Welcome to the Bug Hunter Automation System
 
@@ -78,10 +77,8 @@ def certificateSetup():
 
 
 def createDirEstructure():
-    Path("/tmp/BBH/").mkdir(parents=True, exist_ok=True)
-    #parent_dir = "/mnt/bbh_home/tools/BBH"
-    parent_dir = "/tmp/BBH/"             #Eliminar
-    directory = "MALWARE"                #Eliminar
+    Path("/root/ch00byBBHProfile/").mkdir(parents=True, exist_ok=True)
+    parent_dir = "/root/ch00byBBHProfile/"
     #os.mkdir(parent_dir)
     #if os.mkdir.exists:                  #Revisar
     if not os.path.exists(parent_dir):
@@ -260,7 +257,7 @@ def setupHackingTools():
         os.chdir(parent_dir+'INJECTION/XSS/')
     else:
         os.makedirs(parent_dir + 'INJECTION/XSS/PAYLOADS')
-    xssProjects = '/Volumes/DATAFILE/GITHUB/INFOSEC-HACKING/PENTEST/CUSTOM-TOOLS/MYOWNSCRIPTS/BBH_PROJECT-C-VID2020/Project_Tornado_Ch00byrecon/src/bbh_profile/packages/xssGitProjects.txt' # TODO - FIX, Change for relative Path....
+    xssProjects = parent_dir + 'xssGitProjects.txt' # TODO - FIX, Change for relative Path....
     with open(xssProjects, 'r') as xssGitProjects:
         for xssGit in xssGitProjects:
             #if xssGit.readlines:
