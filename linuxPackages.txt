@@ -1,0 +1,10 @@
+libcurl4-openssl-dev libssl-dev jq ruby-full rbenv libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
+libssl-dev libffi-dev python-dev python-setuptools libldns-dev python3-pip python-pip python-dnspython git rename xargs libimage-exiftool-perl
+perl libio-socket-ssl-perl libdbd-sqlite3-perl libclass-dbi-perl libio-all-lwp-perl fail2ban libpam-google-authenticator awscli
+checkinstall fail2ban gcc firefox sqlite3  git-core python-dev unzip jruby libbz2-dev libc6-dev libgdbm-dev libncursesw5-dev libreadline-gplv2-dev libsqlite3-dev libssl-dev nikto nmap nodejs python-dev python-numpy python-scipy python-setuptools tk-dev unattended-upgrades wget curl
+xvfb x11-xkb-utils xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic x11-apps clang libdbus-1-dev libgtk2.0-dev libnotify-dev libgnome-keyring-dev libgconf2-dev libasound2-dev libcap-dev libcups2-dev libxtst-dev libxss1 libnss3-dev gcc-multilib g++-multilib libldns-dev
+autoconf bison libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev masscan whatweb libssh-dev
+npm golang-go net-tools lynx locate install php7.3-cli postgresql postgresql-contrib mariadb-client-core-10.3 nginx-core libimage-exiftool-perl sysvbannerc
+sqlmap python ruby docker.io socat tree htop vlock screen dirb tor git gcc make libpcap-dev httpie asciinema python-pytest hashcat ipython subversion ttyrec imagemagick
+libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 net-tools fzf netdiscover libpcre3 libpcre3-dev
+

@@ -1,0 +1,6 @@
+'https://github.com/anshumanbh/git-all-secrets.git'
+'https://github.com/dxa4481/truffleHog.git'
+'https://github.com/gwen001/github-search.git'
+'https://github.com/arthaud/git-dumper.git'
+'https://github.com/kost/dvcs-ripper.git'
+'https://raw.githubusercontent.com/internetwache/GitTools/master/Extractor/extractor.sh'

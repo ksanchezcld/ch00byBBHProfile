@@ -1,0 +1,5 @@
+'https://github.com/ticarpi/jwt_tool.git'
+'https://github.com/lmammino/jwt-cracker.git'
+'https://github.com/brendan-rius/c-jwt-cracker.git'
+'https://github.com/ojensen5115/jwtcrack.git'
+'https://github.com/aress31/jwtcat.git'

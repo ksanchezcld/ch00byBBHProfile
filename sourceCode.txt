@@ -1,0 +1,3 @@
+'https://github.com/GerbenJavado/LinkFinder.git'
+'https://github.com/ghostlulzhacks/RetireJs.git'
+'https://bitbucket.org/ariya/phantomjs.git'

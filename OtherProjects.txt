@@ -1,0 +1,3 @@
+https://github.com/blechschmidt/massdns.git
+https://github.com/tomnomnom/assetfinder.git	
+https://github.com/yassineaboukir/asnlookup.git
