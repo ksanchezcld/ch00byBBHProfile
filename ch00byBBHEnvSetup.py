@@ -293,29 +293,29 @@ def setupHackingTools():
 
     # TODO - AQUI VA EL ARCHIVO DE HERRAMIENTAS PARA GIT ENUM
     
-    with open('packages.reconGitProjects.txt', 'r') as reconGit:
+    with open('/root/ch00byBBHProfile/reconGitProjects.txt', 'r') as reconGit:
         for reconGit in reconGit:
             os.system('git clone '+reconGit)
 
-    goReconTool = [
-                    'github.com/michenriksen/gitrob'
-                   ]
-    for goRecon in goReconTool:    
-        os.system('go get '+ goRecon) 
+    #goReconTool = [
+    #                'github.com/michenriksen/gitrob'
+    #               ]
+    #for goRecon in goReconTool:    
+    #    os.system('go get '+ goRecon) 
  
 
-    reconPackages = [
-                      'https://github.com/internetwache/GitTools/blob/master/Dumper/gitdumper.sh',
-                      'https://raw.githubusercontent.com/internetwache/GitTools/master/Extractor/extractor.sh'
-                      ]
-    for reconPckg in reconPckgs:    
-        os.system('wget '+ reconPckg) 
+    #reconPackages = [
+    #                  'https://github.com/internetwache/GitTools/blob/master/Dumper/gitdumper.sh',
+    #                  'https://raw.githubusercontent.com/internetwache/GitTools/master/Extractor/extractor.sh'
+    #                  ]
+    #for reconPckg in reconPckgs:    
+    #    os.system('wget '+ reconPckg) 
 
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
 
-    print(G + "[*][*] Installing" + C + " {{ JWT CRACKING }} " + G + "TOOLS [*][*]")
+    print(G + "[*][*] Installing" + C + " {{ JWT CRACKING TOOLS}} " + G + "[*][*]")
 
-    with open('packages.jwtGitProjects.txt', 'r') as jwtGit:
+    with open('/root/ch00byBBHProfile/jwtGitProjects.txt', 'r') as jwtGit:
         for jwtGit in jwtGit:
             os.system('git clone '+ jwtGit)
 
