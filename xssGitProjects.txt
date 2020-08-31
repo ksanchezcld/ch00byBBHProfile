@@ -1,0 +1,7 @@
+'https://github.com/capture0x/XSS-LOADER.git'
+'https://github.com/s0md3v/XSStrike.git'
+'https://github.com/hahwul/XSpear.git'
+'https://github.com/menkrep1337/XSSCon.git'
+'https://github.com/faizann24/XssPy.git'
+'https://github.com/ethicalhackingplayground/xsspwn.git' 
+'https://github.com/DanMcInerney/xsscrapy.git'
