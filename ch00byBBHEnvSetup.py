@@ -293,7 +293,7 @@ def setupHackingTools():
 
     # TODO - AQUI VA EL ARCHIVO DE HERRAMIENTAS PARA GIT ENUM
     
-    with open('/root/ch00byBBHProfile/reconGitProjects.txt', 'r') as reconGit:
+    with open('/root/ch00byBBHProfile/reconGit.txt', 'r') as reconGit:
         for reconGit in reconGit:
             os.system('git clone '+reconGit)
 
