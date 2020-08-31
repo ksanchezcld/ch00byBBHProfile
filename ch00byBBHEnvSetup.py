@@ -26,7 +26,7 @@ else:
 
 #os.system(screen)                   # to keep the sesion open
 #os.system(ttyrec)                   # to record the session
-parent_dir = "/root/BBH/"             #Eliminar  :: parent_dir = "/mnt/bbh_home/tools/BBH"
+parent_dir = "/root/BBH/"            #Eliminar  :: parent_dir = "/mnt/bbh_home/tools/BBH"
 
 # Welcome to the Bug Hunter Automation System
 
@@ -77,8 +77,8 @@ def certificateSetup():
 
 
 def createDirEstructure():
-    Path("/root/ch00byBBHProfile/BBH").mkdir(parents=True, exist_ok=True)
-    parent_dir = "/root/ch00byBBHProfile/BBH"
+    Path("/root/BBH/").mkdir(parents=True, exist_ok=True)
+    parent_dir = "/root/BBH/"
     #os.mkdir(parent_dir)
     #if os.mkdir.exists:                  #Revisar
     if not os.path.exists(parent_dir):
@@ -257,7 +257,7 @@ def setupHackingTools():
         os.chdir(parent_dir+'INJECTION/XSS/')
     else:
         os.makedirs(parent_dir + 'INJECTION/XSS/PAYLOADS')
-    xssProjects = parent_dir + 'xssGitProjects.txt' # TODO - FIX, Change for relative Path....
+    xssProjects = '/root/ch00byBBHProfile/xssGitProjects.txt' # TODO - FIX, Change for relative Path....
     with open(xssProjects, 'r') as xssGitProjects:
         for xssGit in xssGitProjects:
             #if xssGit.readlines:
