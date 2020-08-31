@@ -1,0 +1,2 @@
+'https://raw.githubusercontent.com/m00dy/cfbypass/master/cfbypass.py'
+'https://github.com/EnableSecurity/wafw00f.git'
