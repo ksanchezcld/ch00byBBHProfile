@@ -8,6 +8,7 @@ R = '\033[31m' # red
 G = '\033[32m' # green
 C = '\033[36m' # cyan
 W = '\033[0m'  # white
+Y = '\033[33m' # yellow
 
 ########################
 # WORDLISTS DEFINITION #
@@ -186,7 +187,7 @@ def createDirEstructure():
 
     os.chdir(parent_dir)
     print(os.listdir(os.getcwd()))
-    print("DIRECTORY STRUCTURE COMPLETED......HAPPY HACKING")
+    print('\n' + C + '[*][*][*]' + Y + ' DIRECTORY STRUCTURE COMPLETED......Installing Tools ' + C + '[*][*][*]' '\n')
 '''
     l1_subdirectories = [
                          "RECON",['SUBDOMAIN', 'GIT', 'AWS', 'AZURE', 'WAF', 'SCREENSHOT', 'CMS', 'SERVICES', 'WEB-FUZZERS'], 
@@ -248,7 +249,7 @@ def systemDependiencies():
                 #pip.main(['install', pckg])                                       # Version Too OLD.  https://pip.pypa.io/en/latest/user_guide/#using-pip-from-your-program
                 #os.system('pip3 install -r', pckg)
                 #subprocess.check_call([sys.executable, '-m', 'pip3', 'wfuzz'])
-        print('\n' + C + '[*][*][*]' + G + ' Installation Successfuly ' + C + '[*][*][*]' '\n')
+        print('\n' + C + '[*][*][*]' + Y + ' Installation Successfuly ' + C + '[*][*][*]' '\n')
                 
         exit()
 
@@ -257,37 +258,43 @@ def setupHackingTools():
     print(G + "[*][*] Installing" + C + " {{XSS}} " + G + "TOOLS [*][*]")
     if os.path.exists(parent_dir+'INJECTION/XSS/'):
         os.chdir(parent_dir+'INJECTION/XSS/')
-        os.system('git clone https://github.com/s0md3v/XSStrike.git')
-        os.system('git clone https://github.com/capture0x/XSS-LOADER/')
-        if not os.path.exists(parent_dir+'INJECTION/XSS/PAYLOADS'):
-            try:
-                os.makedirs(parent_dir+'INJECTION/XSS/PAYLOADS')
-            except:
-                pass
-    #os.system('git clone https://github.com/s0md3v/XSStrike.git')
-    with open('packages.xssGitProjects.txt', 'r') as xssGitProjects:
+    else:
+        os.makedirs(parent_dir + 'INJECTION/XSS/PAYLOADS')
+    xssProjects = '/Volumes/DATAFILE/GITHUB/INFOSEC-HACKING/PENTEST/CUSTOM-TOOLS/MYOWNSCRIPTS/BBH_PROJECT-C-VID2020/Project_Tornado_Ch00byrecon/src/bbh_profile/packages/xssGitProjects.txt' # TODO - FIX, Change for relative Path....
+    with open(xssProjects, 'r') as xssGitProjects:
         for xssGit in xssGitProjects:
-            os.system('git clone ' + xssGit)
+            #if xssGit.readlines:
+            #    print("FIle Installed....")     # TODO
+            #else:
+                os.system('git clone ' + xssGit)
+        print('\n' + C + '[*][*][*]' + Y + ' All ' + G + '{XSS}' + Y + ' Projects Susscessfully Installed....' + R + 'Happy Hunting :) ' + C + '[*][*][*]' '\n')
 
-    xssPackages = [
-                    'https://xsser.03c8.net/xsser/xsser_1.8.2_all.deb'
-    ]
 
-    for xssPckg in xssPckgs:    
-        os.system('wget '+ xssPckg)
-        os.system('dpkg', '-i', xssPckg)
+    #xssPackages = [
+    #                'https://xsser.03c8.net/xsser/xsser_1.8.2_all.deb'
+    #]
+
+    #for xssPckg in xssPckgs:
+     #   os.system('wget '+ xssPckg)
+     #   os.system('dpkg', '-i', xssPckg)
     
-    os.chdir(parent_dir+'INJECTION/XSS/PAYLOADS')       #OPTIMIZE IN NEXT VERSION 
+    #os.chdir(parent_dir+'INJECTION/XSS/PAYLOADS')       # TODO - OPTIMIZE IN NEXT VERSION
 
-    with open('xssPayloads.txt', 'r') as xssPayloads:
-        for xssPayload in xssPayloads:    
-            os.system('wget '+ xssPayload)    
+    #with open('xssPayloads.txt', 'r') as xssPayloads:
+    #    for xssPayload in xssPayloads:
+    #        os.system('wget '+ xssPayload)
+
+    # TODO - CONTINUAR EL MEJORANDO EL CODIGO A PARTIR DE ESTA LINEA
     
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
 
-    print(G + "[*][*] Installing" + C + " {{ RECON/FINGERPRINT }} "  + G + "TOOLS [*][*]")
+    print(G + "[*][*] Installing" + C + " {{ RECON/FINGERPRINTING TOOLS }} "  + G + "[*][*]")
 
-    print(G + "[*][*] Installing"  + C + " {{ GIT ENUMERATION TOOLS }} " + G + "[*][*]")
+    # TODO - AQUI VA EL ARCHIVO DE HERRAMIENTAS PARA RECON/FINGERPRINTING
+
+    print(G + "[*][*] Installing" + C + " {{ GIT ENUMERATION TOOLS }} " + G + "[*][*]")
+
+    # TODO - AQUI VA EL ARCHIVO DE HERRAMIENTAS PARA GIT ENUM
     
     with open('packages.reconGitProjects.txt', 'r') as reconGit:
         for reconGit in reconGit:
@@ -370,7 +377,7 @@ def sendEmail():
 #def boxHardening():
     # Install SSL, SSH, UFW, 
 
-
+#TODO - Move the banner to a file (banner.py)
 def banner():
     os.system('clear')
     print(G + "______________________")
