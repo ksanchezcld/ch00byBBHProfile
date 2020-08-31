@@ -77,8 +77,8 @@ def certificateSetup():
 
 
 def createDirEstructure():
-    Path("/root/ch00byBBHProfile/").mkdir(parents=True, exist_ok=True)
-    parent_dir = "/root/ch00byBBHProfile/"
+    Path("/root/ch00byBBHProfile/BBH").mkdir(parents=True, exist_ok=True)
+    parent_dir = "/root/ch00byBBHProfile/BBH"
     #os.mkdir(parent_dir)
     #if os.mkdir.exists:                  #Revisar
     if not os.path.exists(parent_dir):
