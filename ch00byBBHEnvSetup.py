@@ -263,7 +263,7 @@ def setupHackingTools():
     reconSubdomainProjects = '/root/ch00byBBHProfile/reconSubdomainGitProjects.txt'
     with open(Projects, 'r') as reconSubmainGitProjects:
         for reconSubdomainGit in reconSubdomainGitProjects:
-            os.system('git clone + reconSubdomainGit)
+            os.system('git clone ' + reconSubdomainGit)
 
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
     print(G + "[*][*] Installing" + C + " {{ INPUT INJECTION TOOLS }} " + G + "[*][*]")
