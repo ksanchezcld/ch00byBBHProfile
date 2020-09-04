@@ -253,10 +253,10 @@ def systemDependiencies():
 def setupHackingTools():
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
     print(G + "[*][*] Installing" + C + " {{XSS}} " + G + "TOOLS [*][*]")
-    if os.path.exists(parent_dir+'INJECTION/XSS/'):
-        os.chdir(parent_dir+'INJECTION/XSS/')
+    if os.path.exists(parent_dir + 'INJECTION/XSS/'):
+        os.chdir(parent_dir + 'INJECTION/XSS/')
     else:
-        os.makedirs(parent_dir + 'INJECTION/XSS/PAYLOADS')
+        os.makedirs(parent_dir + 'INJECTION/XSS/')
     xssProjects = '/root/ch00byBBHProfile/xssGitProjects.txt' # TODO - FIX, Change for relative Path....
     with open(xssProjects, 'r') as xssGitProjects:
         for xssGit in xssGitProjects:
@@ -264,6 +264,43 @@ def setupHackingTools():
             #    print("FIle Installed....")     # TODO
             #else:
                 os.system('git clone ' + xssGit)
+
+    if os.path.exists(parent_dir + 'INJECTION/SQLI/'):
+        os.chdir(parent_dir + 'INJECTION/SQLI/')
+    else:
+        os.makedirs(parent_dir + 'INJECTION/SQLI/')
+    sqliProjects = '/root/ch00byBBHProfile/sqliGitProjects.txt'
+    with open(sqliProjects, 'r') as sqliGitProjects:
+        for sqliGit in sqliGitProjects:
+            os.system('git clone ' + sqliGit)
+
+    if os.path.exists(parent_dir + 'INJECTION/SSRF/')
+        os.chdir(parent_dir + 'INJECTION/SSRF/')
+    else:
+        os.makedirs(parent_dir + 'INJECTION/SSRF/')
+        ssrfProjects = '/root/ch00byBBHProfile/ssrfGitProjects.txt'
+        with open(ssrfProjects, 'r') as ssrfGitProjects:
+            for ssrfGit in ssrfGitProjects:
+                os.system('git clone ' + ssrfGit)
+
+    if os.path.exists(parent_dir + 'INJECTION/SSTI/'):
+        os.chdir(parent_dir + 'INJECTION/SSTI/')
+    else:
+        os.makedirs(parent_dir + 'INJECTIN/SSTI/')
+    sstiProjects = '/root/ch00byBBHProfile/sstiGitProjects.txt'
+    with open(sstiProjects, 'r') as sstiGitProjects:
+        for sstiGit in sstiGitProjects:
+            os.system('git clne ' + sstiGit)
+
+    if os.path.exists(parent_dir + 'INJECTION/OS-CMD-INJECTION/'):
+        os.chdir(parent_dir + 'INJECTION/OS-CMD-INJECTION/' )
+    else:
+        os.makedirs(parent_dir + 'INJECTION/OS-CMD-INJECTION/')
+    osCmdIProjects = '/root/ch00byBBHProfile/oscmdiProjects.txt'
+    with open(osCmdIProjects, 'r') as osCmdIGitProjects:
+        for osCmdIGit in osCmdIGitProjects:
+            os.system('git clone ' + osCmdIGit)
+
         print('\n' + C + '[*][*][*]' + Y + ' All ' + G + '{XSS}' + Y + ' Projects Susscessfully Installed....' + R + 'Happy Hunting :) ' + C + '[*][*][*]' '\n')
 
 
@@ -284,9 +321,8 @@ def setupHackingTools():
     # TODO - CONTINUAR EL MEJORANDO EL CODIGO A PARTIR DE ESTA LINEA
     
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
-
     print(G + "[*][*] Installing" + C + " {{ RECON/FINGERPRINTING TOOLS }} "  + G + "[*][*]")
-
+    if os.path.exists(parent_dir+'RECON')
     # TODO - AQUI VA EL ARCHIVO DE HERRAMIENTAS PARA RECON/FINGERPRINTING
 
     print(G + "[*][*] Installing" + C + " {{ GIT ENUMERATION TOOLS }} " + G + "[*][*]")
@@ -300,16 +336,16 @@ def setupHackingTools():
     #goReconTool = [
     #                'github.com/michenriksen/gitrob'
     #               ]
-    #for goRecon in goReconTool:    
-    #    os.system('go get '+ goRecon) 
+    #for goRecon in goReconTool:
+    #    os.system('go get '+ goRecon)
  
 
     #reconPackages = [
     #                  'https://github.com/internetwache/GitTools/blob/master/Dumper/gitdumper.sh',
     #                  'https://raw.githubusercontent.com/internetwache/GitTools/master/Extractor/extractor.sh'
     #                  ]
-    #for reconPckg in reconPckgs:    
-    #    os.system('wget '+ reconPckg) 
+    #for reconPckg in reconPckgs:
+    #    os.system('wget '+ reconPckg)
 
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
 
