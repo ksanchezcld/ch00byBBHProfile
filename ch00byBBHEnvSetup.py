@@ -261,7 +261,7 @@ def setupHackingTools():
     else:
         os.makedirs(parent_dir + 'RECON/')
     reconSubdomainProjects = '/root/ch00byBBHProfile/reconSubdomainGitProjects.txt'
-    with open(Projects, 'r') as reconSubmainGitProjects:
+    with open(reconSubdomainProjects, 'r') as reconSubdomainGitProjects:
         for reconSubdomainGit in reconSubdomainGitProjects:
             os.system('git clone ' + reconSubdomainGit)
 
