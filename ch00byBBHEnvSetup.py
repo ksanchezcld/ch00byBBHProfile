@@ -251,18 +251,30 @@ def systemDependiencies():
         exit()
 
 def setupHackingTools():
+
+
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
-    print(G + "[*][*] Installing" + C + " {{XSS}} " + G + "TOOLS [*][*]")
-    if os.path.exists(parent_dir + 'INJECTION/XSS/'):
-        os.chdir(parent_dir + 'INJECTION/XSS/')
+    print(G + "[*][*] Installing" + C + " {{ RECON/FINGERPRINTING TOOLS }} " + G + "[*][*]")
+
+    if os.path.exists(parent_dir + 'RECON/'):
+        os.chdir(parent_dir + 'RECON/')
     else:
-        os.makedirs(parent_dir + 'INJECTION/XSS/')
-    xssProjects = '/root/ch00byBBHProfile/xssGitProjects.txt' # TODO - FIX, Change for relative Path....
+        os.makedirs(parent_dir + 'RECON/')
+    reconSubdomainProjects = '/root/ch00byBBHProfile/reconSubdomainGitProjects.txt'
+    with open(Projects, 'r') as reconSubmainGitProjects:
+        for reconSubdomainGit in reconSubdomainGitProjects:
+            os.system('git clone 'reconSubdomainGit)
+
+    print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
+    print(G + "[*][*] Installing" + C + " {{ INPUT INJECTION TOOLS }} " + G + "[*][*]")
+
+    if os.path.exists(parent_dir + 'INJECTION/XSS/'):
+            os.chdir(parent_dir + 'INJECTION/XSS/')
+    else:
+            os.makedirs(parent_dir + 'INJECTION/XSS/')
+    xssProjects = '/root/ch00byBBHProfile/xssGitProjects.txt'  # TODO - FIX, Change for relative Path....
     with open(xssProjects, 'r') as xssGitProjects:
-        for xssGit in xssGitProjects:
-            #if xssGit.readlines:
-            #    print("FIle Installed....")     # TODO
-            #else:
+            for xssGit in xssGitProjects:
                 os.system('git clone ' + xssGit)
 
     if os.path.exists(parent_dir + 'INJECTION/SQLI/'):
@@ -296,10 +308,67 @@ def setupHackingTools():
         os.chdir(parent_dir + 'INJECTION/OS-CMD-INJECTION/' )
     else:
         os.makedirs(parent_dir + 'INJECTION/OS-CMD-INJECTION/')
-    osCmdIProjects = '/root/ch00byBBHProfile/oscmdiProjects.txt'
+    osCmdIProjects = '/root/ch00byBBHProfile/oscmdiGitProjects.txt'
     with open(osCmdIProjects, 'r') as osCmdIGitProjects:
         for osCmdIGit in osCmdIGitProjects:
             os.system('git clone ' + osCmdIGit)
+
+    if os.path.exists(parent_dir + 'INJECTION/OPEN-REDIRECT/'):
+        os.chdir(parent_dir + 'INJECTION/OPEN-REDIRECT/')
+    else:
+        os.makedirs(parent_dir + 'INJECTION/OPEN-REDIRECT/')
+    openRedirProjects = '/root/ch00byBBHProfile/openRedirectGitProjects.txt'
+    with open(openRedirProjects, 'r') as openRedirectGitProjects:
+        for openRedirGit in openRedirectGitProjects:
+            os.system('git clone ' openRedirGit)
+
+    if os.path.exists(parent_dir + 'INJECTION/LFI-RFI/'):
+            os.chdir(parent_dir + 'INJECTION/LFI-RFI/')
+    else:
+        os.makedirs(parent_dir + 'INJECTION/LFI-RFI/')
+        lfiRfiProjects = '/root/ch00byBBHProfile/lfi-rfiGitProjects.txt'
+        with open(lfiRfiProjects, 'r') as lfiRfiGitProjects:
+            for lfiRfiGit in lfiRfiGitProjects:
+                os.system('git clone ' lfiRfiGit)
+
+        print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
+        print(G + "[*][*] Installing" + C + " {{ WEB FUZZERS }} " + G + "[*][*]")
+
+        if os.path.exists(parent_dir + 'WEB-FUZZERS/'):
+                os.chdir(parent_dir + 'WEB-FUZZERS/')
+        else:
+                os.makedirs(parent_dir + 'WEB-FUZZERS/')
+        webFuzzerProjects = '/root/ch00byBBHProfile/webFuzzerGitProjects.txt'
+        with open(webFuzzerProjects, 'r') as webFuzzerGitProjects:
+                for webFuzzeriGit in webFuzzerGitProjects:
+                    os.system('git clone ' webFuzzeriGit)
+
+        print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
+        print(G + "[*][*] Installing" + C + " {{ WORDLISTS }} " + G + "[*][*]")
+
+        if os.path.exists(parent_dir + 'WORDLISTS/'):
+                    os.chdir(parent_dir + 'WORDLISTS/')
+        else:
+            os.makedirs(parent_dir + 'WORDLISTS/')
+        wordlistProjects = '/root/ch00byBBHProfile/wordlistGitProjects.txt'
+        with open(wordlistProjects, 'r') as wordlistGitProjects:
+                for wordlistGit in wordlistGitProjects:
+                    os.system('git clone 'wordlistGit)
+
+        print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
+        print(G + "[*][*] Installing" + C + " {{ JWT TOOLS }} " + G + "[*][*]")
+
+
+
+        print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
+        print(G + "[*][*] Installing" + C + " {{ SOURCE CODE TOOLS }} " + G + "[*][*]")
+
+        print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
+        print(G + "[*][*] Installing" + C + " {{ VULNERABILITY SCANNERS }} " + G + "[*][*]")
+
+        print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
+        print(G + "[*][*] Installing" + C + " {{ EXPLOITS }} " + G + "[*][*]")
+
 
         print('\n' + C + '[*][*][*]' + Y + ' All ' + G + '{XSS}' + Y + ' Projects Susscessfully Installed....' + R + 'Happy Hunting :) ' + C + '[*][*][*]' '\n')
 
@@ -322,16 +391,17 @@ def setupHackingTools():
     
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
     print(G + "[*][*] Installing" + C + " {{ RECON/FINGERPRINTING TOOLS }} "  + G + "[*][*]")
-    #if os.path.exists(parent_dir+'RECON')
+    #if os.path.exists(parent_dir+'RECON'):
+     #   pass
     # TODO - AQUI VA EL ARCHIVO DE HERRAMIENTAS PARA RECON/FINGERPRINTING
 
     print(G + "[*][*] Installing" + C + " {{ GIT ENUMERATION TOOLS }} " + G + "[*][*]")
 
     # TODO - AQUI VA EL ARCHIVO DE HERRAMIENTAS PARA GIT ENUM
     
-   # with open('/root/ch00byBBHProfile/reconGitProjects.txt', 'r') as reconGit:
-   #     for reconGit in reconGit:
-   #         os.system('git clone '+reconGit)
+    with open('/root/ch00byBBHProfile/reconGitProjects.txt', 'r') as reconGit:
+        for reconGit in reconGit:
+            os.system('git clone '+reconGit)
 
     #goReconTool = [
     #                'github.com/michenriksen/gitrob'
