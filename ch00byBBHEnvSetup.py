@@ -274,7 +274,7 @@ def setupHackingTools():
         for sqliGit in sqliGitProjects:
             os.system('git clone ' + sqliGit)
 
-    if os.path.exists(parent_dir + 'INJECTION/SSRF/')
+    if os.path.exists(parent_dir + 'INJECTION/SSRF/'):
         os.chdir(parent_dir + 'INJECTION/SSRF/')
     else:
         os.makedirs(parent_dir + 'INJECTION/SSRF/')
