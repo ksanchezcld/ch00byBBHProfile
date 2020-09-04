@@ -362,7 +362,7 @@ def setupHackingTools():
         wordlistProjects = '/root/ch00byBBHProfile/wordlistGitProjects.txt'
         with open(wordlistProjects, 'r') as wordlistGitProjects:
                 for wordlistGit in wordlistGitProjects:
-                    os.system('git clone 'wordlistGit)
+                    os.system('git clone '+ wordlistGit)
 
         print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
         print(G + "[*][*] Installing" + C + " {{ AUTH TOOLS }} " + G + "[*][*]")
