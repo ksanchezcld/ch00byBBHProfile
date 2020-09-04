@@ -338,7 +338,7 @@ def setupHackingTools():
         lfiRfiProjects = '/root/ch00byBBHProfile/lfi-rfiGitProjects.txt'
         with open(lfiRfiProjects, 'r') as lfiRfiGitProjects:
             for lfiRfiGit in lfiRfiGitProjects:
-                os.system('git clone ' lfiRfiGit)
+                os.system('git clone ' + lfiRfiGit)
 
         print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
         print(G + "[*][*] Installing" + C + " {{ WEB FUZZERS }} " + G + "[*][*]")
