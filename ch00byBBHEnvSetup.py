@@ -265,6 +265,15 @@ def setupHackingTools():
         for reconSubdomainGit in reconSubdomainGitProjects:
             os.system('git clone ' + reconSubdomainGit)
 
+    if os.path.exists(parent_dir + 'RECON/GIT/'):
+        os.chdir(parent_dir + 'RECON/GIT/')
+    else:
+        os.makedirs(parent_dir + 'RECON/GIT/')
+    reconGitProject = '/root/ch00byBBHProfile/reconGitProjects.txt'
+    with open(reconGitProject, 'r') as reconGitProjects:
+        for reconGit in reconGitProjects:
+            os.system('git clone ' + reconGit)
+
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
     print(G + "[*][*] Installing" + C + " {{ INPUT INJECTION TOOLS }} " + G + "[*][*]")
 
@@ -302,7 +311,7 @@ def setupHackingTools():
     sstiProjects = '/root/ch00byBBHProfile/sstiGitProjects.txt'
     with open(sstiProjects, 'r') as sstiGitProjects:
         for sstiGit in sstiGitProjects:
-            os.system('git clne ' + sstiGit)
+            os.system('git clone ' + sstiGit)
 
     if os.path.exists(parent_dir + 'INJECTION/OS-CMD-INJECTION/'):
         os.chdir(parent_dir + 'INJECTION/OS-CMD-INJECTION/' )
@@ -329,7 +338,7 @@ def setupHackingTools():
         lfiRfiProjects = '/root/ch00byBBHProfile/lfi-rfiGitProjects.txt'
         with open(lfiRfiProjects, 'r') as lfiRfiGitProjects:
             for lfiRfiGit in lfiRfiGitProjects:
-                os.system('git clone ' + lfiRfiGit)
+                os.system('git clone ' lfiRfiGit)
 
         print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
         print(G + "[*][*] Installing" + C + " {{ WEB FUZZERS }} " + G + "[*][*]")
@@ -353,12 +362,28 @@ def setupHackingTools():
         wordlistProjects = '/root/ch00byBBHProfile/wordlistGitProjects.txt'
         with open(wordlistProjects, 'r') as wordlistGitProjects:
                 for wordlistGit in wordlistGitProjects:
-                    os.system('git clone ' + wordlistGit)
+                    os.system('git clone 'wordlistGit)
 
         print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
-        print(G + "[*][*] Installing" + C + " {{ JWT TOOLS }} " + G + "[*][*]")
+        print(G + "[*][*] Installing" + C + " {{ AUTH TOOLS }} " + G + "[*][*]")
 
+        if os.path.exists(parent_dir + 'AUTH/JWT'):
+            os.chdir(parent_dir + 'AUTH/JWT')
+        else:
+            os.makedirs(parent_dir + 'AUTH/JWT')
+        jwtProjects = '/root/ch00byBBHProfile/jwtGitProjects.txt'
+        with open(jwtProjects, 'r') as jwtGitProjects:
+               for jwtGit in jwtGitProjects:
+                   os.system('git clone ' + jwtGit)
 
+        if os.path.exists(parent_dir + 'AUTH/JWT'):
+            os.chdir(parent_dir + 'AUTH/JWT')
+        else:
+            os.makedirs(parent_dir + 'AWS/')
+        jwtProjects = '/root/ch00byBBHProfile/jwtGitProjects.txt'
+        with open(jwtProjects, 'r') as jwtGitProjects:
+               for jwtGit in jwtGitProjects:
+                   os.system('git clone ' + jwtGit)
 
         print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
         print(G + "[*][*] Installing" + C + " {{ SOURCE CODE TOOLS }} " + G + "[*][*]")
@@ -399,9 +424,7 @@ def setupHackingTools():
 
     # TODO - AQUI VA EL ARCHIVO DE HERRAMIENTAS PARA GIT ENUM
     
-    with open('/root/ch00byBBHProfile/reconGitProjects.txt', 'r') as reconGit:
-        for reconGit in reconGit:
-            os.system('git clone '+reconGit)
+
 
     #goReconTool = [
     #                'github.com/michenriksen/gitrob'
@@ -421,9 +444,7 @@ def setupHackingTools():
 
     print(G + "[*][*] Installing" + C + " {{ JWT CRACKING TOOLS}} " + G + "[*][*]")
 
-    with open('/root/ch00byBBHProfile/jwtGitProjects.txt', 'r') as jwtGit:
-        for jwtGit in jwtGit:
-            os.system('git clone '+ jwtGit)
+
 
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
 
