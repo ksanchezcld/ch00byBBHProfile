@@ -320,7 +320,7 @@ def setupHackingTools():
     openRedirProjects = '/root/ch00byBBHProfile/openRedirectGitProjects.txt'
     with open(openRedirProjects, 'r') as openRedirectGitProjects:
         for openRedirGit in openRedirectGitProjects:
-            os.system('git clone ' openRedirGit)
+            os.system('git clone ' + openRedirGit)
 
     if os.path.exists(parent_dir + 'INJECTION/LFI-RFI/'):
             os.chdir(parent_dir + 'INJECTION/LFI-RFI/')
@@ -329,7 +329,7 @@ def setupHackingTools():
         lfiRfiProjects = '/root/ch00byBBHProfile/lfi-rfiGitProjects.txt'
         with open(lfiRfiProjects, 'r') as lfiRfiGitProjects:
             for lfiRfiGit in lfiRfiGitProjects:
-                os.system('git clone ' lfiRfiGit)
+                os.system('git clone ' + lfiRfiGit)
 
         print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
         print(G + "[*][*] Installing" + C + " {{ WEB FUZZERS }} " + G + "[*][*]")
@@ -341,7 +341,7 @@ def setupHackingTools():
         webFuzzerProjects = '/root/ch00byBBHProfile/webFuzzerGitProjects.txt'
         with open(webFuzzerProjects, 'r') as webFuzzerGitProjects:
                 for webFuzzeriGit in webFuzzerGitProjects:
-                    os.system('git clone ' webFuzzeriGit)
+                    os.system('git clone ' + webFuzzeriGit)
 
         print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
         print(G + "[*][*] Installing" + C + " {{ WORDLISTS }} " + G + "[*][*]")
@@ -353,7 +353,7 @@ def setupHackingTools():
         wordlistProjects = '/root/ch00byBBHProfile/wordlistGitProjects.txt'
         with open(wordlistProjects, 'r') as wordlistGitProjects:
                 for wordlistGit in wordlistGitProjects:
-                    os.system('git clone 'wordlistGit)
+                    os.system('git clone ' + wordlistGit)
 
         print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
         print(G + "[*][*] Installing" + C + " {{ JWT TOOLS }} " + G + "[*][*]")
