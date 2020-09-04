@@ -1,0 +1,4 @@
+https://github.com/swisskyrepo/PayloadsAllTheThings.git
+https://github.com/danielmiessler/SecLists.git
+https://gist.githubusercontent.com/EdOverflow/c4d6d8c43b315546892aa5dab67fdd6c/raw/7dc210b17d7742b46de340b824a0caa0f25cf3cc/open_redirect_wordlist.txt
+https://gist.githubusercontent.com/EdOverflow/1674a85b54f11078928a8931d9c2fabe/raw/29375bdc9316704f4ed2d92d88f36adb93df9ccc/bug-bounty-wordlist.txt
