@@ -322,7 +322,7 @@ def setupHackingTools():
     
     print(R + "[*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*][*]")
     print(G + "[*][*] Installing" + C + " {{ RECON/FINGERPRINTING TOOLS }} "  + G + "[*][*]")
-    if os.path.exists(parent_dir+'RECON')
+    #if os.path.exists(parent_dir+'RECON')
     # TODO - AQUI VA EL ARCHIVO DE HERRAMIENTAS PARA RECON/FINGERPRINTING
 
     print(G + "[*][*] Installing" + C + " {{ GIT ENUMERATION TOOLS }} " + G + "[*][*]")
