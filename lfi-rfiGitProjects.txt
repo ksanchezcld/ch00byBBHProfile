@@ -1,0 +1,2 @@
+'https://github.com/D35m0nd142/LFISuite.git'
+'https://github.com/jcesarstef/dotdotslash.git'
