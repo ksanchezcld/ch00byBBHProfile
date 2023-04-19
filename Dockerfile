@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:kinetic
 RUN apt-get update -y \
     #&& apt-transport-https \
     && apt-get install -y tree \
